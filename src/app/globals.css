@@ -31,3 +31,17 @@ body {
     text-wrap: balance;
   }
 }
+
+/* In your global CSS */
+.orientation-portrait {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (orientation: landscape) {
+  #qr-scanner-container video {
+    transform: rotate(-90deg);
+    max-height: 100vw;
+    max-width: 100vh;
+  }
+}
